@@ -1,88 +1,60 @@
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+:root{
+  --primary:#1677ff;
+  --accent:#0b8a5f;
+  --bg:#f7fbff;
+  --text:#222;
+  --muted:#666;
 }
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial; margin:0; color:var(--text); background:var(--bg); line-height:1.5}
+.container{max-width:1000px; margin:0 auto; padding:0 16px}
+.site-header{background:#fff; box-shadow:0 1px 6px rgba(0,0,0,0.06); position:sticky; top:0; z-index:10}
+.header-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 16px}
+.logo{display:flex; align-items:center; gap:12px}
+.logo-mark{width:52px; height:52px; background:linear-gradient(135deg,#1677ff,#0b8a5f); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; border-radius:8px; font-size:22px}
+.logo-text h1{margin:0; font-size:18px}
+.logo-text p{margin:0; color:var(--muted); font-size:13px}
+.contact-top a{margin-left:12px; color:var(--muted); text-decoration:none}
+.whatsapp-btn{background:#25D366; color:#fff; padding:6px 10px; border-radius:6px; text-decoration:none; margin-left:8px; display:inline-block}
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-}
+.hero{padding:36px 0; background:linear-gradient(180deg, #e8f0ff 0%, #fff 100%)}
+.hero-inner{display:flex; gap:24px; align-items:center; justify-content:space-between}
+.hero-text h2{margin:0 0 8px 0; font-size:28px}
+.hero-text p{margin:0 0 16px 0; color:var(--muted)}
+.cta .btn{display:inline-block; background:var(--primary); color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none; margin-right:8px}
+.cta .btn.ghost{background:transparent; color:var(--primary); border:1px solid rgba(22,119,255,0.12)}
 
-header {
-    background: #222;
-    color: #fff;
-    padding: 10px 0;
-}
+.equip-illustration{font-size:64px; text-align:center}
 
-header .logo {
-    float: left;
-    margin-left: 20px;
-}
+.services{padding:28px 0}
+.service-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px}
+.card{background:#fff; padding:16px; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.06)}
 
-header nav {
-    float: right;
-    margin-right: 20px;
-}
+.how-it-works{background:transparent; padding:24px 0}
+.steps{padding-left:18px; color:var(--muted)}
 
-header nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+.booking{padding:24px 0}
+.form{background:#fff; padding:14px; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.form-row{margin-bottom:10px}
+.form-row label{display:block; font-weight:600; margin-bottom:6px}
+.form-row input,.form-row select,.form-row textarea{width:100%; padding:8px; border:1px solid #e6eefb; border-radius:6px}
+.form-actions{display:flex; gap:8px; align-items:center; margin-top:8px}
+.btn{background:var(--primary); color:#fff; padding:10px 14px; border-radius:6px; border:none; cursor:pointer}
+.btn.whatsapp{background:#25D366}
+.note{font-size:13px; color:var(--muted); margin-top:8px}
 
-header nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
+.about{padding:18px 0}
+.testimonials{padding:18px 0}
+.test-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.test-grid blockquote{background:#fff; padding:12px; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.04); margin:0; color:var(--muted)}
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
+.site-footer{background:#fff; padding:12px 0; margin-top:18px; box-shadow:0 -1px 6px rgba(0,0,0,0.04)}
+.footer-inner{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
 
-.hero {
-    background: url('https://images.unsplash.com/photo-1583454110551-21f2d1f2d52c') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
-.hero-text h2 {
-    font-size: 2.5em;
-}
-
-section {
-    padding: 40px 0;
-}
-
-.services-list {
-    list-style: none;
-    padding: 0;
-}
-
-.services-list li {
-    background: #f4f4f4;
-    padding: 10px;
-    margin: 5px 0;
-}
-
-.map-img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-
-footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
+/* Responsive */
+@media(max-width:700px){
+  .hero-inner{flex-direction:column; text-align:center}
+  .test-grid{grid-template-columns:1fr}
+  .header-inner{flex-direction:column; gap:8px; align-items:flex-start}
 }
