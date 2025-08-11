@@ -1,193 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Swastik Enterprises — Fitness Equipment Service (Pan-India)</title>
-  <meta name="description" content="Swastik Enterprises — Professional installation, repair, AMC and spare-parts services for all fitness equipment across India.">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Swastik Enterprises — Fitness Equipment Service (Pan-India)</title>
+<meta content="Swastik Enterprises — Professional installation, repair, AMC and spare-parts services for all fitness equipment across India." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+    .hero-banner {
+        position: relative;
+        color: white;
+        text-align: center;
+    }
+    .hero-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.4); /* dark overlay */
+        z-index: 0;
+    }
+    .hero-banner h1, .hero-banner p {
+        position: relative;
+        z-index: 1;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+    </style>
 </head>
 <body>
-
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <div class="brand-mark">S</div>
-      <div class="ms-2">
-        <div class="fw-bold">Swastik Enterprises</div>
-        <small class="d-block text-light opacity-75">Fitness Equipment Installation & Service</small>
-      </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMain">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#pan-india">Pan India</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item ms-2"><a class="btn btn-light btn-sm" href="mailto:swastikenterprisesindiaa@gmail.com">Email Us</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header id="home" class="hero-section">
-  <div class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-lg-6 text-white">
-        <h1 class="display-5 fw-bold">Reliable Fitness Equipment Service — Pan India</h1>
-        <p class="lead">Installation • Repair • AMC • Spare Parts — Quick response, trained technicians and genuine parts.</p>
-        <div class="mt-4">
-          <a href="#booking" class="btn btn-light btn-lg me-2">Book Service</a>
-          <a href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises,%20I%20want%20to%20book%20a%20service." target="_blank" class="btn btn-outline-light btn-lg">WhatsApp Us</a>
-        </div>
-        <ul class="mt-4 text-white-50 list-unstyled">
-          <li><strong>Owner:</strong> Swastik Enterprises</li>
-          <li><strong>Address:</strong> Sanjay Palace, Civil Lines, Agra</li>
-          <li><strong>Phone:</strong> <a class="text-white" href="tel:9336766634">9336766634</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-5 offset-lg-1">
-        <div class="card shadow-lg">
-          <div class="card-body p-4">
-            <h5 class="card-title">Quick Booking</h5>
-            <form id="booking" class="row g-2">
-              <div class="col-12"><input id="b_name" class="form-control" placeholder="Full name" required></div>
-              <div class="col-12"><input id="b_phone" class="form-control" placeholder="Mobile number" required></div>
-              <div class="col-12">
-                <select id="b_equip" class="form-select" required>
-                  <option value="">Select Equipment</option>
-                  <option>Treadmill</option>
-                  <option>Spin Bike</option>
-                  <option>Exercise Cycle</option>
-                  <option>Cross Trainer</option>
-                  <option>Rowing Machine</option>
-                  <option>Elliptical Trainer</option>
-                  <option>Multi Gym Station</option>
-                  <option>Strength / Smith Machines</option>
-                  <option>Commercial Gym Systems</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="col-12"><input id="b_date" class="form-control" type="datetime-local"></div>
-              <div class="col-12"><textarea id="b_addr" class="form-control" placeholder="Address (with city)"></textarea></div>
-              <div class="col-12 d-flex gap-2">
-                <button type="button" id="sendMail" class="btn btn-primary flex-fill">Send Email</button>
-                <button type="button" id="sendWA" class="btn btn-success flex-fill">Send WhatsApp</button>
-              </div>
-              <div class="col-12"><small class="text-muted">We will contact you to confirm the booking.</small></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ABOUT -->
-<section id="about" class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center gy-4">
-      <div class="col-lg-6">
-        <h2>About Swastik Enterprises</h2>
-        <p class="text-muted">Swastik Enterprises is a trusted provider of professional fitness equipment services. Established to serve gyms, fitness centers and homeowners, we specialise in installation, preventive maintenance, repairs and supply of spare parts for all major fitness brands. Our technicians are trained, background-checked and use calibrated tools — ensuring safe and reliable service every time.</p>
-        <ul class="list-check text-muted">
-          <li>Pan-India coverage with local technician partners</li>
-          <li>Transparent pricing and genuine parts</li>
-          <li>AMC plans and priority support</li>
-        </ul>
-      </div>
-      <div class="col-lg-6">
-        <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8d47?q=80&w=900&auto=format&fit=crop" alt="About image" class="img-fluid rounded shadow-sm">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="py-5">
-  <div class="container">
-    <h2 class="mb-4">Services & Equipment</h2>
-    <div class="row g-3">
-      <!-- create cards for equipment -->
-      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Treadmill</h5><p class="text-muted small">Motor, belt, alignment, console repairs and installs.</p></div></div>
-      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Spin Bike</h5><p class="text-muted small">Resistance system, chain/belt, and console fixes.</p></div></div>
-      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Exercise Cycle</h5><p class="text-muted small">Pedal, seat, and drive repairs.</p></div></div>
-      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Cross Trainer / Elliptical</h5><p class="text-muted small">Glide, bearings, electronic checks.</p></div></div>
-      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Rowing Machine</h5><p class="text-muted small">Chain/cord, handle, and resistance repairs.</p></div></div>
-      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Multi Gym Stations</h5><p class="text-muted small">Cables, pulleys, upholstery, and frame checks.</p></div></div>
-      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Strength / Smith Machines</h5><p class="text-muted small">Guide rails, safety checks, load adjustments.</p></div></div>
-      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Commercial Gym Systems</h5><p class="text-muted small">Large equipment installs, site planning and commissioning.</p></div></div>
-      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Spare Parts & Accessories</h5><p class="text-muted small">Belts, motors, consoles, bearings, and consumables.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PAN INDIA -->
-<section id="pan-india" class="py-5 bg-light">
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-6">
-        <h2>Pan India Service</h2>
-        <p class="text-muted">We provide services across all 28 states and 8 union territories of India. Below is a list of regions we cover and our network partners.</p>
-        <div class="states-list row">
-<div class="row"><div class="col-md-6"><ul class="list-unstyled"><li>• Andhra Pradesh</li><li>• Arunachal Pradesh</li><li>• Assam</li><li>• Bihar</li><li>• Chhattisgarh</li><li>• Goa</li><li>• Gujarat</li><li>• Haryana</li><li>• Himachal Pradesh</li><li>• Jharkhand</li><li>• Karnataka</li><li>• Kerala</li><li>• Madhya Pradesh</li><li>• Maharashtra</li><li>• Manipur</li><li>• Meghalaya</li><li>• Mizoram</li><li>• Nagaland</li></ul></div><div class='col-md-6'><ul class='list-unstyled'><li>• Odisha</li><li>• Punjab</li><li>• Rajasthan</li><li>• Sikkim</li><li>• Tamil Nadu</li><li>• Telangana</li><li>• Tripura</li><li>• Uttar Pradesh</li><li>• Uttarakhand</li><li>• West Bengal</li><li>• Andaman and Nicobar Islands</li><li>• Chandigarh</li><li>• Dadra and Nagar Haveli and Daman and Diu</li><li>• Delhi</li><li>• Jammu and Kashmir</li><li>• Ladakh</li><li>• Lakshadweep</li><li>• Puducherry</li></ul></div></div>
-      </div>
-      <div class="col-lg-6">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/India_map_blank.png/800px-India_map_blank.png" class="img-fluid rounded shadow-sm" alt="India map">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <h2>Contact & Location</h2>
-    <div class="row gy-4">
-      <div class="col-lg-6">
-        <p><strong>Owner:</strong> Swastik Enterprises</p>
-        <p><strong>Address:</strong> Sanjay Palace, Civil Lines, Agra</p>
-        <p><strong>Phone:</strong> <a href="tel:9336766634">9336766634</a></p>
-        <p><strong>Email:</strong> <a href="mailto:swastikenterprisesindiaa@gmail.com">swastikenterprisesindiaa@gmail.com</a></p>
-        <div class="mt-3">
-          <a href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises" target="_blank" class="btn btn-success me-2">WhatsApp</a>
-          <a href="mailto:swastikenterprisesindiaa@gmail.com" class="btn btn-outline-primary">Email</a>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <!-- Google Map embed: use embed code from Google Maps for Sanjay Palace, Civil Lines, Agra -->
-        <div class="map-responsive">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.10237439407!2d78.00157575!3d27.180882149999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974775511111111%3A0x1111111111111111!2sSanjay%20Place%2C%20Civil%20Lines%2C%20Agra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1691500000000!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-dark text-light py-4">
-  <div class="container d-flex justify-content-between align-items-center">
-    <div>© 2025 Swastik Enterprises</div>
-    <div class="text-end">
-      <small>Designed & maintained by Swastik Enterprises</small>
-    </div>
-  </div>
-</footer>
-
-<!-- WhatsApp floating -->
-<a href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-  <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M20.5 3.5A11 11 0 0 0 3.5 20.5L3 23l2.6-.7A11 11 0 1 0 20.5 3.5zM12 21a8.9 8.9 0 0 1-4.6-1.2L5 20l1.3-2.4A8.9 8.9 0 1 1 12 21z"/><path fill="#25D366" d="M17.3 14.3c-.4-.2-2.2-1.1-2.5-1.3-.4-.2-.7-.3-1 .3s-1.1 1.3-1.4 1.5c-.3.2-.6.1-.9-.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.7.1-.2.3-.5.4-.7.1-.2.2-.4.3-.6.1-.2.1-.5 0-.8-.1-.2-1-2.4-1.4-3.3-.3-.9-.7-.8-1-.8-.3 0-.6 0-.9 0-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8 0 2.2 1.6 4.3 1.8 4.6.2.3 3.2 5 7.9 6.8 4.7 1.8 4.7 1.2 5.6 1.1.9-.1 2.6-1.1 3-2.2.4-1.1.4-2 .3-2.2-.1-.2-.3-.3-.7-.5z"/></svg>
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="#">
+<div class="brand-mark">S</div>
+<div class="ms-2">
+<div class="fw-bold">Swastik Enterprises</div>
+<small class="d-block text-light opacity-75">Fitness Equipment Installation &amp; Service</small>
+</div>
 </a>
-
+<button class="navbar-toggler" data-bs-target="#navMain" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMain">
+<ul class="navbar-nav ms-auto align-items-lg-center">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="#pan-india">Pan India</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<li class="nav-item ms-2"><a class="btn btn-light btn-sm" href="mailto:swastikenterprisesindiaa@gmail.com">Email Us</a></li>
+<li><a href="#service-area">Service Area</a></li></ul>
+</div>
+</div>
+</nav>
+<!-- HERO -->
+<header class="hero-section" id="home">
+<div class="container py-5">
+<div class="row align-items-center">
+<div class="col-lg-6 text-white">
+<h1 class="display-5 fw-bold">Reliable Fitness Equipment Service — Pan India</h1>
+<p class="lead">Installation • Repair • AMC • Spare Parts — Quick response, trained technicians and genuine parts.</p>
+<div class="mt-4">
+<a class="btn btn-light btn-lg me-2" href="#booking">Book Service</a>
+<a class="btn btn-outline-light btn-lg" href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises,%20I%20want%20to%20book%20a%20service." target="_blank">WhatsApp Us</a>
+</div>
+<ul class="mt-4 text-white-50 list-unstyled">
+<li><strong>Owner:</strong> Swastik Enterprises</li>
+<li><strong>Address:</strong> Sanjay Palace, Civil Lines, Agra</li>
+<li><strong>Phone:</strong> <a class="text-white" href="tel:9336766634">9336766634</a></li>
+</ul>
+</div>
+<div class="col-lg-5 offset-lg-1">
+<div class="card shadow-lg">
+<div class="card-body p-4">
+<h5 class="card-title">Quick Booking</h5>
+<form class="row g-2" id="booking">
+<div class="col-12"><input class="form-control" id="b_name" placeholder="Full name" required=""/></div>
+<div class="col-12"><input class="form-control" id="b_phone" placeholder="Mobile number" required=""/></div>
+<div class="col-12">
+<select class="form-select" id="b_equip" required="">
+<option value="">Select Equipment</option>
+<option>Treadmill</option>
+<option>Spin Bike</option>
+<option>Exercise Cycle</option>
+<option>Cross Trainer</option>
+<option>Rowing Machine</option>
+<option>Elliptical Trainer</option>
+<option>Multi Gym Station</option>
+<option>Strength / Smith Machines</option>
+<option>Commercial Gym Systems</option>
+<option>Other</option>
+</select>
+</div>
+<div class="col-12"><input class="form-control" id="b_date" type="datetime-local"/></div>
+<div class="col-12"><textarea class="form-control" id="b_addr" placeholder="Address (with city)"></textarea></div>
+<div class="col-12 d-flex gap-2">
+<button class="btn btn-primary flex-fill" id="sendMail" type="button">Send Email</button>
+<button class="btn btn-success flex-fill" id="sendWA" type="button">Send WhatsApp</button>
+</div>
+<div class="col-12"><small class="text-muted">We will contact you to confirm the booking.</small></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- ABOUT -->
+<section class="py-5 bg-light" id="about">
+<div class="container">
+<div class="row align-items-center gy-4">
+<div class="col-lg-6">
+<h2>About Swastik Enterprises</h2>
+<p class="text-muted">Swastik Enterprises is a trusted provider of professional fitness equipment services. Established to serve gyms, fitness centers and homeowners, we specialise in installation, preventive maintenance, repairs and supply of spare parts for all major fitness brands. Our technicians are trained, background-checked and use calibrated tools — ensuring safe and reliable service every time.</p>
+<ul class="list-check text-muted">
+<li>Pan-India coverage with local technician partners</li>
+<li>Transparent pricing and genuine parts</li>
+<li>AMC plans and priority support</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<img alt="About image" class="img-fluid rounded shadow-sm" src="https://images.unsplash.com/photo-1554284126-aa88f22d8d47?q=80&amp;w=900&amp;auto=format&amp;fit=crop"/>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES -->
+<section class="py-5" id="services">
+<div class="container">
+<h2 class="mb-4">Services &amp; Equipment</h2>
+<div class="row g-3">
+<!-- create cards for equipment -->
+<div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Treadmill</h5><p class="text-muted small">Motor, belt, alignment, console repairs and installs.</p></div></div>
+<div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Spin Bike</h5><p class="text-muted small">Resistance system, chain/belt, and console fixes.</p></div></div>
+<div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Exercise Cycle</h5><p class="text-muted small">Pedal, seat, and drive repairs.</p></div></div>
+<div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Cross Trainer / Elliptical</h5><p class="text-muted small">Glide, bearings, electronic checks.</p></div></div>
+<div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Rowing Machine</h5><p class="text-muted small">Chain/cord, handle, and resistance repairs.</p></div></div>
+<div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Multi Gym Stations</h5><p class="text-muted small">Cables, pulleys, upholstery, and frame checks.</p></div></div>
+<div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Strength / Smith Machines</h5><p class="text-muted small">Guide rails, safety checks, load adjustments.</p></div></div>
+<div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Commercial Gym Systems</h5><p class="text-muted small">Large equipment installs, site planning and commissioning.</p></div></div>
+<div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Spare Parts &amp; Accessories</h5><p class="text-muted small">Belts, motors, consoles, bearings, and consumables.</p></div></div>
+</div>
+</div>
+</section>
+<!-- PAN INDIA -->
+<section class="py-5 bg-light" id="pan-india">
+<div class="container">
+<div class="row gy-4">
+<div class="col-lg-6">
+<h2>Pan India Service</h2>
+<p class="text-muted">We provide services across all 28 states and 8 union territories of India. Below is a list of regions we cover and our network partners.</p>
+<div class="states-list row">
+<div class="row"><div class="col-md-6"><ul class="list-unstyled"><li>• Andhra Pradesh</li><li>• Arunachal Pradesh</li><li>• Assam</li><li>• Bihar</li><li>• Chhattisgarh</li><li>• Goa</li><li>• Gujarat</li><li>• Haryana</li><li>• Himachal Pradesh</li><li>• Jharkhand</li><li>• Karnataka</li><li>• Kerala</li><li>• Madhya Pradesh</li><li>• Maharashtra</li><li>• Manipur</li><li>• Meghalaya</li><li>• Mizoram</li><li>• Nagaland</li></ul></div><div class="col-md-6"><ul class="list-unstyled"><li>• Odisha</li><li>• Punjab</li><li>• Rajasthan</li><li>• Sikkim</li><li>• Tamil Nadu</li><li>• Telangana</li><li>• Tripura</li><li>• Uttar Pradesh</li><li>• Uttarakhand</li><li>• West Bengal</li><li>• Andaman and Nicobar Islands</li><li>• Chandigarh</li><li>• Dadra and Nagar Haveli and Daman and Diu</li><li>• Delhi</li><li>• Jammu and Kashmir</li><li>• Ladakh</li><li>• Lakshadweep</li><li>• Puducherry</li></ul></div></div>
+</div>
+<div class="col-lg-6">
+<img alt="India map" class="img-fluid rounded shadow-sm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/India_map_blank.png/800px-India_map_blank.png"/>
+</div>
+</div>
+</div>
+</div></section>
+<!-- CONTACT -->
+<section class="py-5" id="contact">
+<div class="container">
+<h2>Contact &amp; Location</h2>
+<div class="row gy-4">
+<div class="col-lg-6">
+<p><strong>Owner:</strong> Swastik Enterprises</p>
+<p><strong>Address:</strong> Sanjay Palace, Civil Lines, Agra</p>
+<p><strong>Phone:</strong> <a href="tel:9336766634">9336766634</a></p>
+<p><strong>Email:</strong> <a href="mailto:swastikenterprisesindiaa@gmail.com">swastikenterprisesindiaa@gmail.com</a></p>
+<div class="mt-3">
+<a class="btn btn-success me-2" href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises" target="_blank">WhatsApp</a>
+<a class="btn btn-outline-primary" href="mailto:swastikenterprisesindiaa@gmail.com">Email</a>
+</div>
+</div>
+<div class="col-lg-6">
+<!-- Google Map embed: use embed code from Google Maps for Sanjay Palace, Civil Lines, Agra -->
+<div class="map-responsive">
+<iframe allowfullscreen="" height="350" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.10237439407!2d78.00157575!3d27.180882149999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974775511111111%3A0x1111111111111111!2sSanjay%20Place%2C%20Civil%20Lines%2C%20Agra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1691500000000!5m2!1sen!2sin" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<section class="container py-5" id="service-area"><h2>We Provide Services Across Pan India</h2><ul class="states-list" style="columns: 3; -webkit-columns: 3; -moz-columns: 3; list-style: none; padding: 0;"><li style="margin: 5px 0;">Andhra Pradesh</li><li style="margin: 5px 0;">Arunachal Pradesh</li><li style="margin: 5px 0;">Assam</li><li style="margin: 5px 0;">Bihar</li><li style="margin: 5px 0;">Chhattisgarh</li><li style="margin: 5px 0;">Goa</li><li style="margin: 5px 0;">Gujarat</li><li style="margin: 5px 0;">Haryana</li><li style="margin: 5px 0;">Himachal Pradesh</li><li style="margin: 5px 0;">Jharkhand</li><li style="margin: 5px 0;">Karnataka</li><li style="margin: 5px 0;">Kerala</li><li style="margin: 5px 0;">Madhya Pradesh</li><li style="margin: 5px 0;">Maharashtra</li><li style="margin: 5px 0;">Manipur</li><li style="margin: 5px 0;">Meghalaya</li><li style="margin: 5px 0;">Mizoram</li><li style="margin: 5px 0;">Nagaland</li><li style="margin: 5px 0;">Odisha</li><li style="margin: 5px 0;">Punjab</li><li style="margin: 5px 0;">Rajasthan</li><li style="margin: 5px 0;">Sikkim</li><li style="margin: 5px 0;">Tamil Nadu</li><li style="margin: 5px 0;">Telangana</li><li style="margin: 5px 0;">Tripura</li><li style="margin: 5px 0;">Uttar Pradesh</li><li style="margin: 5px 0;">Uttarakhand</li><li style="margin: 5px 0;">West Bengal</li><li style="margin: 5px 0;">Andaman and Nicobar Islands</li><li style="margin: 5px 0;">Chandigarh</li><li style="margin: 5px 0;">Dadra and Nagar Haveli and Daman and Diu</li><li style="margin: 5px 0;">Delhi</li><li style="margin: 5px 0;">Jammu and Kashmir</li><li style="margin: 5px 0;">Ladakh</li><li style="margin: 5px 0;">Lakshadweep</li><li style="margin: 5px 0;">Puducherry</li></ul></section><section class="container py-5" id="reviews"><h2>Customer Reviews</h2>
+<form id="reviewForm">
+<input id="name" placeholder="Your Name" required="" style="display:block;margin:5px 0;padding:8px;width:100%;" type="text"/>
+<input id="rating" max="5" min="1" placeholder="Rating (1-5)" required="" style="display:block;margin:5px 0;padding:8px;width:100%;" type="number"/>
+<textarea id="comment" placeholder="Your Review" required="" style="display:block;margin:5px 0;padding:8px;width:100%;"></textarea>
+<button style="padding:10px 20px;background:#007bff;color:white;border:none;border-radius:4px;" type="submit">Submit Review</button>
+</form>
+<div id="reviewsList" style="margin-top:20px;"></div>
+</section><footer class="bg-dark text-light py-4">
+<div class="container d-flex justify-content-between align-items-center">
+<div>© 2025 Swastik Enterprises</div>
+<div class="text-end">
+<small>Designed &amp; maintained by Swastik Enterprises</small>
+</div>
+</div>
+</footer>
+<!-- WhatsApp floating -->
+<a aria-label="WhatsApp" class="whatsapp-float" href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises" target="_blank">
+<svg height="24" viewbox="0 0 24 24" width="24"><path d="M20.5 3.5A11 11 0 0 0 3.5 20.5L3 23l2.6-.7A11 11 0 1 0 20.5 3.5zM12 21a8.9 8.9 0 0 1-4.6-1.2L5 20l1.3-2.4A8.9 8.9 0 1 1 12 21z" fill="#fff"></path><path d="M17.3 14.3c-.4-.2-2.2-1.1-2.5-1.3-.4-.2-.7-.3-1 .3s-1.1 1.3-1.4 1.5c-.3.2-.6.1-.9-.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.7.1-.2.3-.5.4-.7.1-.2.2-.4.3-.6.1-.2.1-.5 0-.8-.1-.2-1-2.4-1.4-3.3-.3-.9-.7-.8-1-.8-.3 0-.6 0-.9 0-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8 0 2.2 1.6 4.3 1.8 4.6.2.3 3.2 5 7.9 6.8 4.7 1.8 4.7 1.2 5.6 1.1.9-.1 2.6-1.1 3-2.2.4-1.1.4-2 .3-2.2-.1-.2-.3-.3-.7-.5z" fill="#25D366"></path></svg>
+</a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewForm = document.getElementById('reviewForm');
+    const reviewsList = document.getElementById('reviewsList');
+
+    function displayReviews() {
+        const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+        reviewsList.innerHTML = '';
+        reviews.forEach(r => {
+            const div = document.createElement('div');
+            div.style.border = '1px solid #ccc';
+            div.style.padding = '10px';
+            div.style.margin = '10px 0';
+            div.innerHTML = `<strong>${r.name}</strong> - Rating: ${r.rating}/5<br>${r.comment}`;
+            reviewsList.appendChild(div);
+        });
+    }
+
+    reviewForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const rating = document.getElementById('rating').value;
+        const comment = document.getElementById('comment').value;
+        const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+        reviews.push({ name, rating, comment });
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        reviewForm.reset();
+        displayReviews();
+    });
+
+    displayReviews();
+});
+</script>
 </body>
 </html>
