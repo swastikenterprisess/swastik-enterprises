@@ -1,159 +1,43 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Swastik Enterprises - Fitness Equipment Service</title>
-  <meta name="description" content="Swastik Enterprises provides professional installation, repair and AMC services for all fitness equipment. Serving Gurshaiganj, Kannauj and nearby areas."/>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="#" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swastik Enterprises - Fitness Equipment Services</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <div class="logo-mark">S</div>
-        <div class="logo-text">
-          <h1>Swastik Enterprises</h1>
-          <p class="tag">Fitness Equipment Installation & Repair</p>
-        </div>
-      </div>
-      <div class="contact-top">
-        <a href="tel:9336766634">📞 9336766634</a>
-        <a class="whatsapp-btn" href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises%2C%20I%20want%20to%20book%20a%20service." target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-  </header>
+    <header>
+        <h1>Swastik Enterprises</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#pan-india">Pan India Service</a>
+        </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h2>Reliable Service for All Fitness Equipment</h2>
-          <p>Installation • Repair • Maintenance • AMC • Spare Parts</p>
-          <div class="cta">
-            <a class="btn" href="#booking">Book Now</a>
-            <a class="btn ghost" href="mailto:swastikenterprisesindiaa@gmail.com">Email Us</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <!-- simple illustration placeholder -->
-          <div class="equip-illustration">🏋️‍♂️</div>
-        </div>
-      </div>
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We provide installation, maintenance, and repair services for all types of fitness equipment.</p>
     </section>
 
-    <section id="services" class="services container">
-      <h3>Our Services</h3>
-      <div class="service-grid">
-        <div class="card">
-          <h4>Treadmill</h4>
-          <p>Installation, motor & belt repair, alignment and preventive maintenance.</p>
-        </div>
-        <div class="card">
-          <h4>Exercise Bike</h4>
-          <p>Pedal & resistance repair, console troubleshooting and parts replacement.</p>
-        </div>
-        <div class="card">
-          <h4>Elliptical / Cross Trainer</h4>
-          <p>Drive & glide maintenance, bearings, and electronic checks.</p>
-        </div>
-        <div class="card">
-          <h4>Strength Machines</h4>
-          <p>Cable, pulleys, frame, and seat adjustments + spare parts service.</p>
-        </div>
-        <div class="card">
-          <h4>Commercial Gym Systems</h4>
-          <p>Site handling, heavy equipment installation and scheduled AMC.</p>
-        </div>
-        <div class="card">
-          <h4>Spare Parts</h4>
-          <p>Filters, belts, motors, consoles and other original/replacement parts.</p>
-        </div>
-      </div>
+    <section id="pan-india">
+        <h2>Pan India Service</h2>
+        <p>We provide fitness equipment installation, maintenance, and repair services across all states and major cities in India.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/India_map_blank.png" alt="India Map" style="max-width:100%; height:auto;">
     </section>
 
-    <section id="how" class="container how-it-works">
-      <h3>How It Works</h3>
-      <ol class="steps">
-        <li><strong>Book</strong> — Click Book Now or WhatsApp us with your details.</li>
-        <li><strong>Technician</strong> — Experienced technician will visit at scheduled time.</li>
-        <li><strong>Service</strong> — We perform installation/repair & test equipment.</li>
-        <li><strong>Feedback</strong> — Give quick feedback via WhatsApp link.</li>
-      </ol>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Owner:</strong> Swastik Enterprises</p>
+        <p><strong>Address:</strong> Sanjay Palace, Civil Lines, Agra</p>
+        <p><strong>Email:</strong> swastikenterprisesindiaa@gmail.com</p>
+        <p><strong>Phone:</strong> 9336766634</p>
     </section>
 
-    <section id="booking" class="container booking">
-      <h3>Book a Service</h3>
-      <p>Fill the form below and we'll contact you to confirm the schedule. Or click WhatsApp to send a prefilled message.</p>
-
-      <form id="bookingForm" class="form">
-        <div class="form-row">
-          <label>Full Name <span>*</span></label>
-          <input type="text" id="name" required placeholder="Your full name">
-        </div>
-        <div class="form-row">
-          <label>Mobile Number <span>*</span></label>
-          <input type="tel" id="phone" required placeholder="10 digit mobile number">
-        </div>
-        <div class="form-row">
-          <label>Equipment <span>*</span></label>
-          <select id="equipment" required>
-            <option value="">Select equipment</option>
-            <option>Treadmill</option>
-            <option>Exercise Bike</option>
-            <option>Elliptical / Cross Trainer</option>
-            <option>Strength Machine</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>Preferred Date & Time</label>
-          <input type="datetime-local" id="datetime">
-        </div>
-        <div class="form-row">
-          <label>Address</label>
-          <textarea id="address" placeholder="Your full address (Delhi, Tamil Nadu, Uttar Pradesh, Pan India etc.)"></textarea>
-        </div>
-        <div class="form-row">
-          <label>Message / Problem Description</label>
-          <textarea id="message" placeholder="Short description of issue or request"></textarea>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn">Submit (Email)</button>
-          <button type="button" id="whatsappSend" class="btn whatsapp">Send via WhatsApp</button>
-        </div>
-        <p class="note">By submitting you agree to be contacted for service confirmation. We respect your privacy.</p>
-      </form>
-    </section>
-
-    <section id="about" class="container about">
-      <h3>About Swastik Enterprises</h3>
-      <p><strong>Swastik Enterprises</strong> is owned and operated by <strong>Swastik </strong>. We provide reliable fitness equipment installation and maintenance services across Gurshaiganj, Kannauj, UP. Our technicians are trained to handle domestic and commercial equipment with care and professionalism.</p>
-      <ul>
-        <li>Address: Sanjay Palace Civil Line Agra, Agr, UP</li>
-        <li>Phone: <a href="tel:9336766634">9336766634</a></li>
-        <li>Email: <a href="mailto:swastikenterprisesindiaa@gmail.com">swastikenterprisesindiaa@gmail.com</a></li>
-      </ul>
-    </section>
-
-    <section id="testimonials" class="container testimonials">
-      <h3>Testimonials</h3>
-      <div class="test-grid">
-        <blockquote>Great and fast service. Technician arrived on time and fixed my treadmill belt — Ramesh K.</blockquote>
-        <blockquote>Professional work and good follow-up. Recommended. — Seema P.</blockquote>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© 2025 Swastik Enterprises</div>
-      <div>Designed by Swastik Enterprises • Contact: 9336766634</div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <footer>
+        <p>© 2025 Swastik Enterprises. All rights reserved.</p>
+    </footer>
 </body>
 </html>
