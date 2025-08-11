@@ -1,188 +1,193 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Swastik Enterprises - Fitness Equipment Service</title>
-  <meta name="description" content="Swastik Enterprises provides professional installation, repair and AMC services for all fitness equipment. Serving Gurshaiganj, Kannauj and nearby areas."/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Swastik Enterprises — Fitness Equipment Service (Pan-India)</title>
+  <meta name="description" content="Swastik Enterprises — Professional installation, repair, AMC and spare-parts services for all fitness equipment across India.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="#" />
 </head>
 <body>
 
-<section id="home-banner" style="background:url('https://images.unsplash.com/photo-1594737625785-c84c6f3c9a2b') center/cover no-repeat; color:white; padding:100px 20px; text-align:center;">
-  <h1 style="font-size:48px;">Welcome to Swastik Enterprises</h1>
-  <p style="font-size:20px;">Your Trusted Partner for Fitness Equipment Services Across India</p>
-</section>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <div class="logo-mark">S</div>
-        <div class="logo-text">
-          <h1>Swastik Enterprises</h1>
-          <p class="tag">Fitness Equipment Installation & Repair</p>
-        </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <div class="brand-mark">S</div>
+      <div class="ms-2">
+        <div class="fw-bold">Swastik Enterprises</div>
+        <small class="d-block text-light opacity-75">Fitness Equipment Installation & Service</small>
       </div>
-      <div class="contact-top">
-        <a href="tel:9336766634">📞 9336766634</a>
-        <a class="whatsapp-btn" href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises%2C%20I%20want%20to%20book%20a%20service." target="_blank" rel="noopener">WhatsApp</a>
-      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pan-india">Pan India</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-2"><a class="btn btn-light btn-sm" href="mailto:swastikenterprisesindiaa@gmail.com">Email Us</a></li>
+      </ul>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h2>Reliable Service for All Fitness Equipment</h2>
-          <p>Installation • Repair • Maintenance • AMC • Spare Parts</p>
-          <div class="cta">
-            <a class="btn" href="#booking">Book Now</a>
-            <a class="btn ghost" href="mailto:swastikenterprisesindiaa@gmail.com">Email Us</a>
+<!-- HERO -->
+<header id="home" class="hero-section">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-white">
+        <h1 class="display-5 fw-bold">Reliable Fitness Equipment Service — Pan India</h1>
+        <p class="lead">Installation • Repair • AMC • Spare Parts — Quick response, trained technicians and genuine parts.</p>
+        <div class="mt-4">
+          <a href="#booking" class="btn btn-light btn-lg me-2">Book Service</a>
+          <a href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises,%20I%20want%20to%20book%20a%20service." target="_blank" class="btn btn-outline-light btn-lg">WhatsApp Us</a>
+        </div>
+        <ul class="mt-4 text-white-50 list-unstyled">
+          <li><strong>Owner:</strong> Swastik Enterprises</li>
+          <li><strong>Address:</strong> Sanjay Palace, Civil Lines, Agra</li>
+          <li><strong>Phone:</strong> <a class="text-white" href="tel:9336766634">9336766634</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-5 offset-lg-1">
+        <div class="card shadow-lg">
+          <div class="card-body p-4">
+            <h5 class="card-title">Quick Booking</h5>
+            <form id="booking" class="row g-2">
+              <div class="col-12"><input id="b_name" class="form-control" placeholder="Full name" required></div>
+              <div class="col-12"><input id="b_phone" class="form-control" placeholder="Mobile number" required></div>
+              <div class="col-12">
+                <select id="b_equip" class="form-select" required>
+                  <option value="">Select Equipment</option>
+                  <option>Treadmill</option>
+                  <option>Spin Bike</option>
+                  <option>Exercise Cycle</option>
+                  <option>Cross Trainer</option>
+                  <option>Rowing Machine</option>
+                  <option>Elliptical Trainer</option>
+                  <option>Multi Gym Station</option>
+                  <option>Strength / Smith Machines</option>
+                  <option>Commercial Gym Systems</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-12"><input id="b_date" class="form-control" type="datetime-local"></div>
+              <div class="col-12"><textarea id="b_addr" class="form-control" placeholder="Address (with city)"></textarea></div>
+              <div class="col-12 d-flex gap-2">
+                <button type="button" id="sendMail" class="btn btn-primary flex-fill">Send Email</button>
+                <button type="button" id="sendWA" class="btn btn-success flex-fill">Send WhatsApp</button>
+              </div>
+              <div class="col-12"><small class="text-muted">We will contact you to confirm the booking.</small></div>
+            </form>
           </div>
         </div>
-        <div class="hero-image">
-          <!-- simple illustration placeholder -->
-          <div class="equip-illustration">🏋️‍♂️</div>
-        </div>
       </div>
-    </section>
-
-    <section id="services" class="services container">
-      <h3>Our Services</h3>
-      <div class="service-grid">
-        <div class="card">
-          <h4>Treadmill</h4>
-          <p>Installation, motor & belt repair, alignment and preventive maintenance.</p>
-        </div>
-        <div class="card">
-          <h4>Exercise Bike</h4>
-          <p>Pedal & resistance repair, console troubleshooting and parts replacement.</p>
-        </div>
-        <div class="card">
-          <h4>Elliptical / Cross Trainer</h4>
-          <p>Drive & glide maintenance, bearings, and electronic checks.</p>
-        </div>
-        <div class="card">
-          <h4>Strength Machines</h4>
-          <p>Cable, pulleys, frame, and seat adjustments + spare parts service.</p>
-        </div>
-        <div class="card">
-          <h4>Commercial Gym Systems</h4>
-          <p>Site handling, heavy equipment installation and scheduled AMC.</p>
-        </div>
-        <div class="card">
-          <h4>Spare Parts</h4>
-          <p>Filters, belts, motors, consoles and other original/replacement parts.</p>
-        </div>
-      </div>
-    </section>
-
-<ul>
-<li>Treadmill</li>
-<li>Spin Bike</li>
-<li>Exercise Cycle</li>
-<li>Cross Trainer</li>
-<li>Rowing Machine</li>
-<li>Elliptical Trainer</li>
-<li>Multi Gym Station</li>
-<li>Dumbbells & Barbells</li>
-<li>Smith Machine</li>
-<li>Leg Press Machine</li>
-<li>Stair Climber</li>
-<li>Yoga Mats & Accessories</li>
-<li>Weight Plates & Rods</li>
-</ul>
-
-
-    <section id="how" class="container how-it-works">
-      <h3>How It Works</h3>
-      <ol class="steps">
-        <li><strong>Book</strong> — Click Book Now or WhatsApp us with your details.</li>
-        <li><strong>Technician</strong> — Experienced technician will visit at scheduled time.</li>
-        <li><strong>Service</strong> — We perform installation/repair & test equipment.</li>
-        <li><strong>Feedback</strong> — Give quick feedback via WhatsApp link.</li>
-      </ol>
-    </section>
-
-    <section id="booking" class="container booking">
-      <h3>Book a Service</h3>
-      <p>Fill the form below and we'll contact you to confirm the schedule. Or click WhatsApp to send a prefilled message.</p>
-
-      <form id="bookingForm" class="form">
-        <div class="form-row">
-          <label>Full Name <span>*</span></label>
-          <input type="text" id="name" required placeholder="Your full name">
-        </div>
-        <div class="form-row">
-          <label>Mobile Number <span>*</span></label>
-          <input type="tel" id="phone" required placeholder="10 digit mobile number">
-        </div>
-        <div class="form-row">
-          <label>Equipment <span>*</span></label>
-          <select id="equipment" required>
-            <option value="">Select equipment</option>
-            <option>Treadmill</option>
-            <option>Exercise Bike</option>
-            <option>Elliptical / Cross Trainer</option>
-            <option>Strength Machine</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>Preferred Date & Time</label>
-          <input type="datetime-local" id="datetime">
-        </div>
-        <div class="form-row">
-          <label>Address</label>
-          <textarea id="address" placeholder="Your full address (Sanjay Palace, Civil Lines, Agra</textarea>
-        </div>
-        <div class="form-row">
-          <label>Message / Problem Description</label>
-          <textarea id="message" placeholder="Short description of issue or request"></textarea>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn">Submit (Email)</button>
-          <button type="button" id="whatsappSend" class="btn whatsapp">Send via WhatsApp</button>
-        </div>
-        <p class="note">By submitting you agree to be contacted for service confirmation. We respect your privacy.</p>
-      </form>
-    </section>
-
-    
-<h2>About Swastik Enterprises</h2>
-<p>Swastik Enterprises is a trusted name in fitness equipment services, providing installation, maintenance, and repair across Pan India. 
-With years of industry experience, we specialise in servicing all major fitness equipment brands and models, ensuring top performance and customer satisfaction. 
-Our commitment to quality and timely service has made us a preferred partner for gyms, fitness centers, and individual clients nationwide.</p>
-
-
-    <section id="testimonials" class="container testimonials">
-      <h3>Testimonials</h3>
-      <div class="test-grid">
-        <blockquote>Great and fast service. Technician arrived on time and fixed my treadmill belt — Ramesh K.</blockquote>
-        <blockquote>Professional work and good follow-up. Recommended. — Seema P.</blockquote>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© 2025 Swastik Enterprises</div>
-      <div>Designed by Swastik Enterprises • Contact: 9336766634</div>
     </div>
-  </footer>
+  </div>
+</header>
 
-  <script src="script.js"></script>
-
-<section id="pan-india" class="section">
+<!-- ABOUT -->
+<section id="about" class="py-5 bg-light">
   <div class="container">
-    <h2>Pan India Service</h2>
-    <p>We provide professional fitness equipment services across all states and major cities in India.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/India_map_blank.png/800px-India_map_blank.png" alt="India Map" style="max-width:100%;height:auto;margin-top:20px;border:1px solid #ccc;">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6">
+        <h2>About Swastik Enterprises</h2>
+        <p class="text-muted">Swastik Enterprises is a trusted provider of professional fitness equipment services. Established to serve gyms, fitness centers and homeowners, we specialise in installation, preventive maintenance, repairs and supply of spare parts for all major fitness brands. Our technicians are trained, background-checked and use calibrated tools — ensuring safe and reliable service every time.</p>
+        <ul class="list-check text-muted">
+          <li>Pan-India coverage with local technician partners</li>
+          <li>Transparent pricing and genuine parts</li>
+          <li>AMC plans and priority support</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8d47?q=80&w=900&auto=format&fit=crop" alt="About image" class="img-fluid rounded shadow-sm">
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- SERVICES -->
+<section id="services" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Services & Equipment</h2>
+    <div class="row g-3">
+      <!-- create cards for equipment -->
+      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Treadmill</h5><p class="text-muted small">Motor, belt, alignment, console repairs and installs.</p></div></div>
+      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Spin Bike</h5><p class="text-muted small">Resistance system, chain/belt, and console fixes.</p></div></div>
+      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Exercise Cycle</h5><p class="text-muted small">Pedal, seat, and drive repairs.</p></div></div>
+      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Cross Trainer / Elliptical</h5><p class="text-muted small">Glide, bearings, electronic checks.</p></div></div>
+      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Rowing Machine</h5><p class="text-muted small">Chain/cord, handle, and resistance repairs.</p></div></div>
+      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Multi Gym Stations</h5><p class="text-muted small">Cables, pulleys, upholstery, and frame checks.</p></div></div>
+      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Strength / Smith Machines</h5><p class="text-muted small">Guide rails, safety checks, load adjustments.</p></div></div>
+      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Commercial Gym Systems</h5><p class="text-muted small">Large equipment installs, site planning and commissioning.</p></div></div>
+      <div class="col-md-4"><div class="service-card p-4 h-100 shadow-sm"><h5>Spare Parts & Accessories</h5><p class="text-muted small">Belts, motors, consoles, bearings, and consumables.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAN INDIA -->
+<section id="pan-india" class="py-5 bg-light">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-6">
+        <h2>Pan India Service</h2>
+        <p class="text-muted">We provide services across all 28 states and 8 union territories of India. Below is a list of regions we cover and our network partners.</p>
+        <div class="states-list row">
+<div class="row"><div class="col-md-6"><ul class="list-unstyled"><li>• Andhra Pradesh</li><li>• Arunachal Pradesh</li><li>• Assam</li><li>• Bihar</li><li>• Chhattisgarh</li><li>• Goa</li><li>• Gujarat</li><li>• Haryana</li><li>• Himachal Pradesh</li><li>• Jharkhand</li><li>• Karnataka</li><li>• Kerala</li><li>• Madhya Pradesh</li><li>• Maharashtra</li><li>• Manipur</li><li>• Meghalaya</li><li>• Mizoram</li><li>• Nagaland</li></ul></div><div class='col-md-6'><ul class='list-unstyled'><li>• Odisha</li><li>• Punjab</li><li>• Rajasthan</li><li>• Sikkim</li><li>• Tamil Nadu</li><li>• Telangana</li><li>• Tripura</li><li>• Uttar Pradesh</li><li>• Uttarakhand</li><li>• West Bengal</li><li>• Andaman and Nicobar Islands</li><li>• Chandigarh</li><li>• Dadra and Nagar Haveli and Daman and Diu</li><li>• Delhi</li><li>• Jammu and Kashmir</li><li>• Ladakh</li><li>• Lakshadweep</li><li>• Puducherry</li></ul></div></div>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/India_map_blank.png/800px-India_map_blank.png" class="img-fluid rounded shadow-sm" alt="India map">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2>Contact & Location</h2>
+    <div class="row gy-4">
+      <div class="col-lg-6">
+        <p><strong>Owner:</strong> Swastik Enterprises</p>
+        <p><strong>Address:</strong> Sanjay Palace, Civil Lines, Agra</p>
+        <p><strong>Phone:</strong> <a href="tel:9336766634">9336766634</a></p>
+        <p><strong>Email:</strong> <a href="mailto:swastikenterprisesindiaa@gmail.com">swastikenterprisesindiaa@gmail.com</a></p>
+        <div class="mt-3">
+          <a href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises" target="_blank" class="btn btn-success me-2">WhatsApp</a>
+          <a href="mailto:swastikenterprisesindiaa@gmail.com" class="btn btn-outline-primary">Email</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <!-- Google Map embed: use embed code from Google Maps for Sanjay Palace, Civil Lines, Agra -->
+        <div class="map-responsive">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.10237439407!2d78.00157575!3d27.180882149999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974775511111111%3A0x1111111111111111!2sSanjay%20Place%2C%20Civil%20Lines%2C%20Agra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1691500000000!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light py-4">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>© 2025 Swastik Enterprises</div>
+    <div class="text-end">
+      <small>Designed & maintained by Swastik Enterprises</small>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp floating -->
+<a href="https://wa.me/919336766634?text=Hello%20Swastik%20Enterprises" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M20.5 3.5A11 11 0 0 0 3.5 20.5L3 23l2.6-.7A11 11 0 1 0 20.5 3.5zM12 21a8.9 8.9 0 0 1-4.6-1.2L5 20l1.3-2.4A8.9 8.9 0 1 1 12 21z"/><path fill="#25D366" d="M17.3 14.3c-.4-.2-2.2-1.1-2.5-1.3-.4-.2-.7-.3-1 .3s-1.1 1.3-1.4 1.5c-.3.2-.6.1-.9-.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.7.1-.2.3-.5.4-.7.1-.2.2-.4.3-.6.1-.2.1-.5 0-.8-.1-.2-1-2.4-1.4-3.3-.3-.9-.7-.8-1-.8-.3 0-.6 0-.9 0-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8 0 2.2 1.6 4.3 1.8 4.6.2.3 3.2 5 7.9 6.8 4.7 1.8 4.7 1.2 5.6 1.1.9-.1 2.6-1.1 3-2.2.4-1.1.4-2 .3-2.2-.1-.2-.3-.3-.7-.5z"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

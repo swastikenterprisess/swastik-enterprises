@@ -1,28 +1,22 @@
 
-// Simple client-side behavior
-document.getElementById('bookingForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  // Prepare mailto fallback
-  var name = document.getElementById('name').value.trim();
-  var phone = document.getElementById('phone').value.trim();
-  var equipment = document.getElementById('equipment').value;
-  var datetime = document.getElementById('datetime').value;
-  var address = document.getElementById('address').value.trim();
-  var message = document.getElementById('message').value.trim();
-  var subject = encodeURIComponent('Service Request from Website - ' + name);
-  var body = encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + '\nEquipment: ' + equipment + '\nPreferred: ' + datetime + '\nAddress: ' + address + '\nMessage: ' + message);
+// Booking actions: mailto and WhatsApp prefill
+document.getElementById('sendMail').addEventListener('click', function(){
+  var n = document.getElementById('b_name').value || 'Customer';
+  var p = document.getElementById('b_phone').value || '';
+  var e = document.getElementById('b_equip').value || '';
+  var d = document.getElementById('b_date').value || '';
+  var a = document.getElementById('b_addr').value || '';
+  var subject = encodeURIComponent('Service booking - ' + n);
+  var body = encodeURIComponent('Name: ' + n + '\nPhone: ' + p + '\nEquipment: ' + e + '\nPreferred: ' + d + '\nAddress: ' + a);
   window.location.href = 'mailto:swastikenterprisesindiaa@gmail.com?subject=' + subject + '&body=' + body;
 });
-
-document.getElementById('whatsappSend').addEventListener('click', function(e){
-  // Prefill WhatsApp message
-  var name = encodeURIComponent(document.getElementById('name').value.trim() || 'Customer');
-  var phone = encodeURIComponent(document.getElementById('phone').value.trim() || '');
-  var equipment = encodeURIComponent(document.getElementById('equipment').value || 'Equipment');
-  var datetime = encodeURIComponent(document.getElementById('datetime').value || '');
-  var address = encodeURIComponent(document.getElementById('address').value.trim() || '');
-  var message = encodeURIComponent(document.getElementById('message').value.trim() || '');
-  var text = 'Hello Swastik Enterprises, I would like to book a service.%0AName: ' + name + '%0APhone: ' + phone + '%0AEquipment: ' + equipment + '%0APreferred: ' + datetime + '%0AAddress: ' + address + '%0ADetails: ' + message;
-  var wa_link = 'https://wa.me/919336766634?text=' + text;
-  window.open(wa_link, '_blank');
+document.getElementById('sendWA').addEventListener('click', function(){
+  var n = encodeURIComponent(document.getElementById('b_name').value || 'Customer');
+  var p = encodeURIComponent(document.getElementById('b_phone').value || '');
+  var e = encodeURIComponent(document.getElementById('b_equip').value || '');
+  var d = encodeURIComponent(document.getElementById('b_date').value || '');
+  var a = encodeURIComponent(document.getElementById('b_addr').value || '');
+  var text = 'Hello Swastik Enterprises, I want to book a service.%0AName:' + n + '%0APhone:' + p + '%0AEquipment:' + e + '%0APreferred:' + d + '%0AAddress:' + a;
+  var wa = 'https://wa.me/919336766634?text=' + text;
+  window.open(wa, '_blank');
 });
