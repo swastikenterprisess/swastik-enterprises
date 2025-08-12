@@ -1,4 +1,434 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swastik Enterprises — Installation · Service · Trust</title>
+  <meta name="description" content="Swastik Enterprises — Professional fitness equipment installation, repair and AMC. Pan-India trained technicians, genuine parts, quick response."/>
+  <style>
+    /* ========== RESET & BASE ========== */
+    :root{
+      --brand:#E30613;
+      --dark:#111;
+      --muted:#666;
+      --bg:#fafafa;
+      --card:#fff;
+      --glass: rgba(255,255,255,0.08);
+      --shadow: 0 6px 20px rgba(0,0,0,0.08);
+      --maxw:1100px;
+      --radius:10px;
+      --accent:#E30613;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color:var(--dark);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    a{color:var(--accent); text-decoration:none}
+    img{max-width:100%; display:block}
+
+    /* ====== HEADER / NAV ====== */
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .nav{
+      max-width:var(--maxw);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .logo-wrap{width:56px;height:56px;display:grid;place-items:center}
+    .site-title{font-weight:700;font-size:18px}
+    .nav-links{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    .nav-links a{font-weight:600;color:var(--dark)}
+    .cta-btn{
+      background:var(--brand);
+      color:white;padding:8px 14px;border-radius:8px;font-weight:700;
+      box-shadow:0 6px 18px rgba(227,6,19,0.18);
+    }
+
+    /* ====== HERO ====== */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      min-height:60vh;
+      display:grid;
+      align-items:center;
+      padding:34px 18px;
+      background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color:#fff;
+    }
+    .hero-inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      align-items:center;
+    }
+    .hero h1{
+      margin:0 0 12px 0;
+      font-size:clamp(22px,4.4vw,44px);
+      line-height:1.02;
+      letter-spacing:-0.5px;
+      font-weight:800;
+      text-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    }
+    .hero p.lead{
+      margin:0 0 18px 0;
+      color:rgba(255,255,255,0.92);
+      font-size:18px;
+      max-width:700px;
+    }
+    .hero .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero .btn{
+      padding:12px 18px;border-radius:10px;font-weight:700;border:0;cursor:pointer;
+    }
+    .btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 25px rgba(227,6,19,0.18)}
+    .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,0.18);color:#fff}
+
+    .quick-contact{
+      background:rgba(0,0,0,0.35);
+      padding:18px;border-radius:12px;box-shadow:var(--shadow);
+      display:flex;flex-direction:column;gap:8px;
+    }
+    .quick-contact .item{display:flex;align-items:center;gap:10px;font-weight:700}
+    .contact-small{font-size:14px;color:#fff;opacity:0.95}
+
+    /* ====== CONTENT SECTIONS ====== */
+    main{padding:36px 18px}
+    .container{max-width:var(--maxw);margin:0 auto}
+
+    /* ABOUT */
+    .about{
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:28px;
+      align-items:center;
+    }
+    .about .card{
+      background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--shadow);
+    }
+    .usp-list{display:grid;gap:10px;margin-top:12px}
+    .usp-item{display:flex;gap:12px;align-items:center;font-weight:700;color:var(--muted)}
+
+    /* SERVICES GRID */
+    .services-grid{
+      display:grid;
+      grid-template-columns: repeat(4,1fr);
+      gap:18px;margin-top:18px;
+    }
+    .service{
+      background:var(--card);border-radius:12px;padding:16px;text-align:center;box-shadow:var(--shadow);
+      transition:transform .28s ease, box-shadow .28s ease;
+      cursor:default;
+    }
+    .service:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.12)}
+    .service h3{margin:10px 0 6px;font-size:18px}
+    .service p{color:var(--muted);font-size:14px}
+
+    /* MAP + MARKERS */
+    .map-card{
+      background:linear-gradient(180deg,#fff,#fff);
+      border-radius:12px;padding:14px;box-shadow:var(--shadow);
+      margin-top:18px;
+    }
+    .map-wrap{position:relative;background:#f7f7f7;border-radius:8px;overflow:hidden}
+    .map-image{width:100%;display:block;opacity:0.95}
+    .marker{
+      position:absolute;width:14px;height:14px;border-radius:50%;background:var(--brand);
+      box-shadow:0 6px 16px rgba(227,6,19,0.25);transform:translate(-50%,-50%);
+      animation: pulse 2.2s infinite;
+      border:3px solid rgba(255,255,255,0.9);
+    }
+    @keyframes pulse{
+      0%{transform:translate(-50%,-50%) scale(1)}
+      50%{transform:translate(-50%,-50%) scale(1.4);opacity:0.85}
+      100%{transform:translate(-50%,-50%) scale(1)}
+    }
+    .marker:hover{transform:translate(-50%,-50%) scale(1.1)}
+    .marker-label{position:absolute;background:#111;color:#fff;padding:6px 8px;border-radius:8px;font-size:13px;white-space:nowrap;transform:translate(-50%,calc(-100% - 10px));display:none}
+    .marker:hover + .marker-label{display:block}
+
+    /* COUNTERS */
+    .counters{display:flex;gap:18px;align-items:stretch;margin-top:18px}
+    .counter{flex:1;background:linear-gradient(180deg,#fff,#fff);padding:18px;border-radius:10px;text-align:center;box-shadow:var(--shadow)}
+    .counter h4{margin:0;color:var(--muted);font-size:14px}
+    .counter .num{font-size:28px;font-weight:800;color:var(--brand);margin-top:6px}
+
+    /* TESTIMONIALS */
+    .testimonials{margin-top:20px}
+    .test-list{display:flex;gap:12px;overflow:hidden;position:relative}
+    .test-item{min-width:320px;background:var(--card);padding:16px;border-radius:10px;box-shadow:var(--shadow)}
+    .test-controls{display:flex;gap:8px;justify-content:center;margin-top:12px}
+
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:18px;margin-top:18px}
+    .contact-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    form .field{display:flex;flex-direction:column;margin-bottom:10px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6e6e6;font-size:14px}
+
+    /* FOOTER */
+    footer{margin-top:30px;background:#111;color:#fff;padding:20px 18px;border-radius:8px 8px 0 0}
+    footer .foot-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+
+    /* RESPONSIVE */
+    @media (max-width:1000px){
+      .hero-inner{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .nav-links{display:none}
+      .hero{padding:24px 14px}
+      .quick-contact{padding:12px}
+      .services-grid{grid-template-columns:1fr}
+      .hero-inner{gap:14px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header" role="banner">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo-wrap" aria-hidden="true">
+          <!-- inline SVG logo (dumbbell + subtle swastik mark) -->
+          <svg viewBox="0 0 120 120" width="56" height="56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swastik Enterprises logo">
+            <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E30613"/><stop offset="1" stop-color="#990000"/></linearGradient></defs>
+            <rect rx="14" width="120" height="120" fill="url(#g)"/>
+            <!-- dumbbell icon -->
+            <g transform="translate(12,34)" fill="#fff">
+              <rect x="0" y="18" width="96" height="12" rx="6"/>
+              <rect x="-6" y="8" width="18" height="34" rx="4"/>
+              <rect x="84" y="8" width="18" height="34" rx="4"/>
+            </g>
+            <!-- subtle swastik lines -->
+            <g transform="translate(66,12) scale(.45)" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.15">
+              <path d="M0 0h40v40M40 0v40h-40"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <div class="site-title">Swastik Enterprises</div>
+          <div style="font-size:12px;color:var(--muted)">Installation · Service · Trust</div>
+        </div>
+      </div>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="cta-btn" href="#contact">Book Now</a>
+        <a class="cta-btn" style="background:#0f9d58" href="https://wa.me/919336766634" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="region" aria-label="Hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Fitness Equipment — Installed Right, Maintained For Life</h1>
+        <p class="lead">Professional installation, quick repairs and AMC plans for treadmills, spin bikes, cross trainers and commercial gym systems. Trained technicians · Genuine parts · Pan-India service.</p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Service</button>
+          <a class="btn btn-ghost" href="https://wa.me/919336766634" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+
+        <div style="margin-top:16px;color:#fff;opacity:0.95">
+          <small>Call / WhatsApp: <strong>+91-9336766634</strong> · <a href="mailto:swastikenterprisesindiaa@gmail.com" style="color:#fff;text-decoration:underline">swastikenterprisesindiaa@gmail.com</a></small>
+        </div>
+      </div>
+
+      <div class="quick-contact" aria-hidden="false">
+        <div class="item"><strong style="color:#fff">Fast On-Site Service</strong></div>
+        <div class="item contact-small">✓ Trained & verified technicians</div>
+        <div class="item contact-small">✓ Genuine spare parts</div>
+        <div class="item contact-small">✓ AMC & priority support</div>
+        <div style="margin-top:8px;display:flex;gap:8px">
+          <a class="btn btn-primary" href="#contact">Request Callback</a>
+          <a class="btn btn-ghost" href="tel:+919336766634">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+
+      <!-- ABOUT -->
+      <section id="about" class="about" aria-labelledby="aboutHeading">
+        <div class="card">
+          <h2 id="aboutHeading">About Swastik Enterprises</h2>
+          <p><strong>Swastik Enterprises</strong> is a trusted partner for fitness equipment installation, repair and AMC across India. From home gyms to commercial fitness centers — we ensure your machines run smoothly and safely.</p>
+
+          <div class="usp-list" aria-hidden="false">
+            <div class="usp-item">✅ <span style="color:#333">Pan-India trained technicians</span></div>
+            <div class="usp-item">✅ <span style="color:#333">Genuine spare parts & transparent pricing</span></div>
+            <div class="usp-item">✅ <span style="color:#333">Fast repair turnaround & AMC plans</span></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Technician</button>
+            <a style="margin-left:8px" href="https://wa.me/919336766634" class="btn btn-ghost">WhatsApp</a>
+          </div>
+        </div>
+
+        <aside style="display:flex;flex-direction:column;gap:12px">
+          <div class="card">
+            <h4 style="margin:0 0 6px 0">Mission</h4>
+            <p style="margin:0;color:var(--muted)">Hamari mission hai fitness ko accessible aur reliable banana through professional installation and maintenance services.</p>
+          </div>
+
+          <div class="card">
+            <h4 style="margin:0 0 6px 0">Quick Stats</h4>
+            <div class="counters">
+              <div class="counter"><h4>Machines Serviced</h4><div class="num" data-target="1250">0</div></div>
+              <div class="counter"><h4>Happy Clients</h4><div class="num" data-target="420">0</div></div>
+              <div class="counter"><h4>Years Experience</h4><div class="num" data-target="8">0</div></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" aria-labelledby="servicesHeading" style="margin-top:32px">
+        <h2 id="servicesHeading">Our Services</h2>
+        <div class="services-grid" role="list">
+          <div class="service" role="listitem">
+            <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=800&q=80" alt="Treadmill installation">
+            <h3>Treadmill Installation & Repair</h3>
+            <p>Motor, belt, alignment, console installs & repairs — smooth performance guaranteed.</p>
+          </div>
+          <div class="service" role="listitem">
+            <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80" alt="Spin bike">
+            <h3>Spin Bike Setup & Service</h3>
+            <p>Seat/pedal alignment, gear checks, chain/oil maintenance for smooth rides.</p>
+          </div>
+          <div class="service" role="listitem">
+            <img src="https://images.unsplash.com/photo-1617372529976-5b4dc6c63a64?auto=format&fit=crop&w=800&q=80" alt="Commercial equipment">
+            <h3>Commercial Gym Systems</h3>
+            <p>Multi-gyms, smith machines, cross trainers — installation and preventive maintenance.</p>
+          </div>
+          <div class="service" role="listitem">
+            <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80" alt="AMC">
+            <h3>AMC & Spare Parts</h3>
+            <p>Annual maintenance contracts and genuine spare parts to extend equipment life.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COVERAGE MAP -->
+      <section id="coverage" style="margin-top:36px">
+        <h2>Pan-India Coverage</h2>
+        <div class="map-card">
+          <p style="margin:0 0 8px 0;color:var(--muted)">We travel across towns and cities — quick response via local technicians. (Click markers to see city)</p>
+          <div class="map-wrap" id="mapWrap" style="height:320px;">
+            <!-- Background map image (you can replace with a local SVG map) -->
+            <img class="map-image" src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c4?auto=format&fit=crop&w=1400&q=60" alt="India map background" style="height:100%;object-fit:cover;filter:grayscale(0.2) brightness(0.95)"/>
+            <!-- Markers: positioned by percentage (left,top) relative to container -->
+            <div class="marker" style="left:45%; top:36%;" data-city="Delhi"></div><div class="marker-label" style="left:45%; top:36%;">Delhi, NCR</div>
+            <div class="marker" style="left:54%; top:50%;" data-city="Bengaluru"></div><div class="marker-label" style="left:54%; top:50%;">Bengaluru</div>
+            <div class="marker" style="left:43%; top:62%;" data-city="Mumbai"></div><div class="marker-label" style="left:43%; top:62%;">Mumbai</div>
+            <div class="marker" style="left:63%; top:28%;" data-city="Kolkata"></div><div class="marker-label" style="left:63%; top:28%;">Kolkata</div>
+            <div class="marker" style="left:34%; top:58%;" data-city="Jaipur"></div><div class="marker-label" style="left:34%; top:58%;">Jaipur</div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+            <div style="font-weight:700">Service Areas:</div>
+            <div style="color:var(--muted)">Delhi · Mumbai · Bengaluru · Kolkata · Jaipur · Pan-India</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" style="margin-top:36px">
+        <h2>What Clients Say</h2>
+        <div class="testimonials">
+          <div class="test-list" id="testList">
+            <div class="test-item">
+              <strong>Gym Owner, Agra</strong>
+              <p style="color:var(--muted)">"Swastik Enterprises installed our commercial treadmill bank quickly and professionally. Technicians were skilled and polite."</p>
+            </div>
+            <div class="test-item">
+              <strong>Home User, Delhi</strong>
+              <p style="color:var(--muted)">"Fast repair service and genuine parts. My treadmill works like new!"</p>
+            </div>
+            <div class="test-item">
+              <strong>Fitness Studio, Bengaluru</strong>
+              <p style="color:var(--muted)">"AMC plan keeps our machines running with no downtime. Highly recommended."</p>
+            </div>
+          </div>
+
+          <div class="test-controls" style="margin-top:12px">
+            <button onclick="slideTest(-1)">Prev</button>
+            <button onclick="slideTest(1)">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" style="margin-top:36px">
+        <h2>Contact & Quick Booking</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Request a Technician</h3>
+            <p style="color:var(--muted)">Fill details and we'll call back within working hours.</p>
+            <form id="bookingForm" onsubmit="submitForm(event)">
+              <div class="field"><label for="name">Full Name</label><input id="name" required></div>
+              <div class="field"><label for="phone">Phone</label><input id="phone" required placeholder="+91"/></div>
+              <div class="field"><label for="city">City</label><input id="city" required></div>
+              <div class="field"><label for="equip">Equipment</label>
+                <select id="equip">
+                  <option>Treadmill</option><option>Spin Bike</option><option>Cross Trainer</option><option>Other</option>
+                </select>
+              </div>
+              <div class="field"><label for="notes">Notes</label><textarea id="notes" rows="3" placeholder="Describe issue or request"></textarea></div>
+              <div style="display:flex;gap:8px;align-items:center">
+                <button class="btn btn-primary" type="submit">Request Callback</button>
+                <a class="btn btn-ghost" href="https://wa.me/919336766634" target="_blank">WhatsApp Now</a>
+              </div>
+              <div id="formMsg" style="margin-top:10px;color:green;display:none">Request received — we will call you shortly.</div>
+            </form>
+          </div>
+
+          <aside class="contact-card">
+            <h3>Contact Details</h3>
+            <p><strong>Phone:</strong> <a href="tel:+919336766634">+91-9336766634</a></p>
+            <p><strong>Email:</strong> <a href="mailto:swastikenterprisesindiaa@gmail.com">swastikenterprisesindiaa@gmail.com</a></p>
+            <p><strong>Address:</strong> Sanjay Palace, Civil Lines, Agra, India</p>
+            <d<!DOCTYPE html>
 
 <html lang="en">
 <head>
